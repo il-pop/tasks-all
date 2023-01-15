@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <form>
+        <label for="numbers">Numbers:</label>
+        <input type="text" id="numbers" name="numbers">
+        <br>
+        <label for="left">Left:</label>
+        <input type="text" id="left" name="left">
+        <br>
+        <label for="right">Right:</label>
+        <input type="text" id="right" name="right">
+        <br>
+        <input type="submit" value="Calculate">
+      </form>
+
+      <script>
+        function solution(numbers, left, right) {
+          let result = numbers.map((Number,index) => {
+            var preCheck = false
+            for(let checker = left; cheker <= right; checker++){
+              let equation = (index+1) * checker
+              if(Number==equation){
+                preCheck = true
+              }
+          }
+            return preCheck
+          })
+          return result;
+        }
+      
+        
+      </script>
+</body>
+</html>
